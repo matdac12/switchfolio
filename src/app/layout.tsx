@@ -15,14 +15,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rinkit Adhana - Portfolio",
-    template: "%s | Rinkit Adhana"
+    default: "Mattia Da Campo - Portfolio",
+    template: "%s | Mattia Da Campo"
   },
-  description: "Portfolio of Rinkit Adhana - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-  keywords: ["Rinkit Adhana", "Portfolio", "Full Stack Developer", "React", "Next.js", "Node.js", "Web Developer"],
-  authors: [{ name: "Rinkit Adhana" }],
-  creator: "Rinkit Adhana",
-  metadataBase: new URL("https://www.rinkit.tech"),
+  description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
+  keywords: ["Mattia Da Campo", "Portfolio", "Software Engineer", "Basketball Player", "AI", "Data Analysis", "Trading"],
+  authors: [{ name: "Mattia Da Campo" }],
+  creator: "Mattia Da Campo",
+  metadataBase: new URL("https://mattiadacampo.com"),
   icons: {
     icon: [
       {
@@ -50,16 +50,16 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Rinkit Adhana - Portfolio",
-    description: "Portfolio of Rinkit Adhana - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
-    url: "https://www.rinkit.tech",
-    siteName: "Switchfolio",
+    title: "Mattia Da Campo - Portfolio",
+    description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
+    url: "https://mattiadacampo.com",
+    siteName: "Mattia Da Campo",
     images: [
       {
         url: "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
         width: 1200,
         height: 630,
-        alt: "Rinkit Adhana - Portfolio"
+        alt: "Mattia Da Campo - Portfolio"
       },
     ],
     locale: "en-IN",
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rinkit Adhana - Portfolio",
-    description: "Portfolio of Rinkit Adhana - Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.",
+    title: "Mattia Da Campo - Portfolio",
+    description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
     images: ["https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png"],
-    creator: "@damnGruz",
+    creator: "@0xmatti",
   },
   robots: {
     index: true,
