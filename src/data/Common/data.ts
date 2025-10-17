@@ -81,6 +81,9 @@ const navLinks = [
   },
 ]
 
+const supportText = ""
+const newsText = ""
+
 export {
   projects,
   writings,
@@ -88,4 +91,6 @@ export {
   skills,
   hireText,
   navLinks,
+  supportText,
+  newsText,
 }
