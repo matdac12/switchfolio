@@ -1,24 +1,22 @@
-import { FaDiscord, FaLinkedinIn } from "react-icons/fa6"
-import { FaXTwitter } from "react-icons/fa6"
-// import { FaInstagram } from "react-icons/fa6"
-import { FaGithub } from "react-icons/fa6"
-import { SiLeetcode } from "react-icons/si"
+import { FaXTwitter, FaGithub, FaInstagram } from "react-icons/fa6"
 import { MdOutlineMail } from "react-icons/md"
-import { SiBluesky } from "react-icons/si"
 
-const rinkitImage = "/assets/Images/pfps/mark.jpeg"
-const rinkitName = "Rinkit Adhana"
-const rinkitShortName = "Rinkit"
-const rinkitBio = "Software Engineer"
+const rinkitImage = "/assets/Images/pfps/mattia.jpg" // Place your profile image here (same as English version)
+const rinkitName = "Mattia Da Campo"
+const rinkitShortName = "Mattia"
+const rinkitBio = "Programmatore e Giocatore Professionista di Basket"
 const rinkitAbout = `
   <p>
-    Hey! I'm Rinkit Adhana, an undergraduate computer science student and full-stack developer who loves turning ideas into real, working products.
+    Ciao, mi chiamo Mattia.
   </p>
   <p>
-    I'm flexible working with any tech stack, though I prefer modern tools. I'm currently working with Next.js, Django, Express, and TypeScript.
+    Sono un programmatore e un giocatore professionista di basket.
   </p>
   <p>
-    I love contributing to open-source projects and have actively participated in multiple hackathons, where I collaborate, build, and solve real-world problems.
+    Ho sempre vissuto seguendo le mie due passioni: il basket e la matematica. Mi sono laureato alla Seattle University nel 2020 e al Georgia Tech nel 2023. Da allora, lavoro come analista di dati e sviluppatore, continuando la mia carriera nel basket a livello professionistico.
+  </p>
+  <p>
+    Non riesco a smettere di creare cose nuove e non riesco a smettere di lavorare su me stesso. Amo quello che faccio.
   </p>
 `
 
@@ -26,51 +24,49 @@ const rinkitLink = [
   {
     id: 1,
     name: "Github",
-    link: "https://github.com/rinkitadhana",
+    link: "https://github.com/matdac12",
     icon: FaGithub,
   },
-
   {
     id: 2,
     name: "Twitter",
-    link: "https://x.com/intent/follow?screen_name=damnGruz",
+    link: "https://x.com/0xmatti",
     icon: FaXTwitter,
   },
-
   {
     id: 3,
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rinkitadhana",
-    icon: FaLinkedinIn,
+    name: "Instagram",
+    link: "https://instagram.com/mattia.dacampo",
+    icon: FaInstagram,
   },
-
   {
     id: 4,
-    name: "LeetCode",
-    link: "https://leetcode.com/u/rinkitadhana",
-    icon: SiLeetcode,
+    name: "Email",
+    link: "mailto:mattia.dacampo@gmail.com",
+    icon: MdOutlineMail,
   },
 ]
 
 const rinkitContact =
-  "Most of the time, you'll find me hanging out on my Discord channel while coding. I'm also super active on X, so feel free to DM me there or reach out to me via email if you have any queries."
+  "Sono più attivo su Twitter/X e Instagram. Sentiti libero di contattarmi via email per qualsiasi richiesta, collaborazione o semplicemente per connetterci!"
+
 const rinkitContactLink = [
   {
     id: 1,
     name: "Twitter",
-    link: "https://x.com/intent/follow?screen_name=damnGruz",
+    link: "https://x.com/0xmatti",
     icon: FaXTwitter,
   },
   {
     id: 2,
-    name: "Discord",
-    link: "https://discord.gg/JgcDzHpWum",
-    icon: FaDiscord,
+    name: "Instagram",
+    link: "https://instagram.com/mattia.dacampo",
+    icon: FaInstagram,
   },
   {
     id: 3,
     name: "Email",
-    link: "mailto:therinkit@gmail.com",
+    link: "mailto:mattia.dacampo@gmail.com",
     icon: MdOutlineMail,
   },
 ]
@@ -78,46 +74,27 @@ const rinkitContactLink = [
 const rinkitFooterLink = [
   {
     id: 1,
-    name: "Mail",
-    link: "mailto:therinkit@gmail.com",
+    name: "Email",
+    link: "mailto:mattia.dacampo@gmail.com",
     icon: MdOutlineMail,
   },
   {
     id: 2,
     name: "Github",
-    link: "https://github.com/rinkitadhana",
+    link: "https://github.com/matdac12",
     icon: FaGithub,
   },
-
   {
     id: 3,
     name: "Twitter",
-    link: "https://x.com/intent/follow?screen_name=damnGruz",
+    link: "https://x.com/0xmatti",
     icon: FaXTwitter,
   },
   {
     id: 4,
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rinkitadhana",
-    icon: FaLinkedinIn,
-  },
-  {
-    id: 5,
-    name: "LeetCode",
-    link: "https://leetcode.com/u/rinkitadhana",
-    icon: SiLeetcode,
-  },
-  // {
-  //   id: 6,
-  //   name: "Instagram",
-  //   link: "https://www.instagram.com/rnkktt",
-  //   icon: FaInstagram,
-  // },
-  {
-    id: 6,
-    name: "Bluesky",
-    link: "https://bsky.app/profile/damngruz.bsky.social",
-    icon: SiBluesky,
+    name: "Instagram",
+    link: "https://instagram.com/mattia.dacampo",
+    icon: FaInstagram,
   },
 ]
 

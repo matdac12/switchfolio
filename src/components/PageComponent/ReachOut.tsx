@@ -10,7 +10,7 @@ const ReachOut = () => {
 
   return (
     <section className="flex flex-col gap-0.5">
-      <SectionTitle title="Reach out to me" />
+      <SectionTitle title={isSwitchOn ? "Reach out to me" : "Contattami"} />
       <div className=" flex flex-col gap-2.5">
         <p>{isSwitchOn ? gruzContact : rinkitContact}</p>
         <div>

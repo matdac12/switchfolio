@@ -6,13 +6,13 @@ import { emailLink, hireText } from "@/data/Common/data"
 const HireMe = () => {
   return (
     <section className="flex flex-col gap-0.5">
-      <SectionTitle title="Hire Me" />
+      <SectionTitle title="Lavoriamo Insieme" />
       <div className=" flex flex-col gap-2">
         <p>{hireText}</p>
         <div>
           <a className="btn" target="_blank" href={emailLink}>
             <PiSuitcaseSimpleBold />
-            Hire Me
+            Contattami
           </a>
         </div>
       </div>

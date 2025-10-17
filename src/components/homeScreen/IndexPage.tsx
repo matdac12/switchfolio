@@ -11,8 +11,6 @@ import HireMe from "../PageComponent/HireMe"
 import AnimatedWrapper from "@/utils/AnimatedWrapper"
 import { useSwitch } from "../Context/SwitchContext"
 import Nav from "../PageComponent/Nav"
-import SupportMe from "../PageComponent/SupportMe"
-import Newsletter from "../PageComponent/Newsletter"
 // import Quote from "../PageComponent/Quote"
 
 const IndexPage = () => {
@@ -46,12 +44,6 @@ const IndexPage = () => {
           </AnimatedWrapper>
           <AnimatedWrapper delay={0.75}>
             <Writings />
-          </AnimatedWrapper>
-          <AnimatedWrapper delay={0.85}>
-            <Newsletter />
-          </AnimatedWrapper>
-          <AnimatedWrapper delay={0.95}>
-            <SupportMe />
           </AnimatedWrapper>
           {/* <AnimatedWrapper delay={1.05}>
             <Quote />
