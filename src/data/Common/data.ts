@@ -50,7 +50,13 @@ const projects = [
   },
 ]
 
-const writings = [
+const writings: Array<{
+  id: number
+  img: string
+  head: string
+  des: string
+  link: string
+}> = [
   // Add your blog posts here when you start writing
 ]
 
