@@ -1,19 +1,21 @@
-"use client"
-import { projects } from "@/data/Common/data"
-import ProjectBox from "../ProjectBox"
-import SectionTitle from "../SectionTitle"
-import { useState } from "react"
+"use client";
+import { projects } from "@/data/Common/data";
+import ProjectBox from "../ProjectBox";
+import SectionTitle from "../SectionTitle";
+import { useState } from "react";
 import {
   MdKeyboardDoubleArrowDown,
   MdKeyboardDoubleArrowUp,
-} from "react-icons/md"
-import AnimatedWrapper from "@/utils/AnimatedWrapper"
+} from "react-icons/md";
+import AnimatedWrapper from "@/utils/AnimatedWrapper";
+import { useSwitch } from "../Context/SwitchContext";
 
 const Projects = () => {
-  const showAllVis = projects.length > 2
-  const [showAll, setShowAll] = useState(false)
-  const visibleProjects = showAll ? projects : projects.slice(0, 2)
-  let delayValue = 0
+  const { isSwitchOn } = useSwitch();
+  const showAllVis = projects.length > 2;
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+  let delayValue = 0;
   return (
     <div id="projects" className="flex flex-col gap-3">
       <SectionTitle title="Projects" />
@@ -26,7 +28,7 @@ const Projects = () => {
             <ProjectBox
               title={project.title}
               img={project.img}
-              content={project.content}
+              content={isSwitchOn ? project.content : project.content_it}
               status={project.status}
               skill={project.skill}
               url={project.url || ""}
@@ -61,7 +63,7 @@ const Projects = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

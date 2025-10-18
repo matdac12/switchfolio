@@ -1,51 +1,51 @@
-import React, { useEffect, useState } from "react"
-import { AiOutlineLoading3Quarters } from "react-icons/ai"
-import { FaRegStar } from "react-icons/fa6"
-import { IoMdArrowDropdown } from "react-icons/io"
+import React, { useEffect, useState } from "react";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { FaRegStar } from "react-icons/fa6";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 interface StarData {
-  stargazers_count: number
-  name: string
-  full_name: string
+  stargazers_count: number;
+  name: string;
+  full_name: string;
 }
 
 const StarButton = () => {
-  const [stars, setStars] = useState<number | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const [stars, setStars] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchStars = async () => {
       try {
         const response = await fetch(
-          `https://api.github.com/repos/rinkitadhana/switchfolio`,
+          `https://api.github.com/repos/matdac12/switchfolio`,
           {
             headers: {
               Accept: "application/vnd.github.v3+json",
             },
-          }
-        )
+          },
+        );
 
         if (!response.ok) {
-          throw new Error(`Error: ${response.status}`)
+          throw new Error(`Error: ${response.status}`);
         }
 
-        const data: StarData = await response.json()
-        setStars(data.stargazers_count)
+        const data: StarData = await response.json();
+        setStars(data.stargazers_count);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to fetch")
+        setError(err instanceof Error ? err.message : "Failed to fetch");
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    fetchStars()
-  }, [])
+    };
+    fetchStars();
+  }, []);
 
   return (
     <a
       className="  px-3 border border-zinc-700 hidden md:flex items-center gap-2 rounded-[8px] bg-zinc-900 hover:bg-zinc-900/60 transition-all duration-200"
       target="_blank"
-      href="https://github.com/rinkitadhana/Switchfolio"
+      href="https://github.com/matdac12/Switchfolio"
     >
       <FaRegStar className="size-[16px]" />
       <span className="text-sm">{"Star"}</span>
@@ -63,7 +63,7 @@ const StarButton = () => {
 
       <IoMdArrowDropdown className="size-[16px]" />
     </a>
-  )
-}
+  );
+};
 
-export default StarButton
+export default StarButton;
