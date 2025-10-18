@@ -1,24 +1,70 @@
-"use client"
-import { gruzBio, gruzImage, gruzLink, gruzName } from "@/data/GruzData/data"
-import React, { useState } from "react"
-import { InfoTip } from "../InfoTip"
-import Available from "../Available"
-import { useSwitch } from "../Context/SwitchContext"
+"use client";
+import { gruzBio, gruzImage, gruzLink, gruzName } from "@/data/GruzData/data";
+import React, { useState, useRef } from "react";
+import { FaPause, FaPlay } from "react-icons/fa";
+import { InfoTip } from "../InfoTip";
+import Available from "../Available";
+import { useSwitch } from "../Context/SwitchContext";
 import {
   rinkitBio,
   rinkitImage,
   rinkitLink,
   rinkitName,
-} from "@/data/RinkitData/data"
-import { AnimatePresence } from "framer-motion"
-import { motion } from "framer-motion"
-import Image from "next/image"
+} from "@/data/RinkitData/data";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import Image from "next/image";
 const InfoCard: React.FC = () => {
-  const { isSwitchOn } = useSwitch()
-  const [isOpen, setIsOpen] = useState(false)
-  const socialLink = isSwitchOn ? gruzLink : rinkitLink
+  const { isSwitchOn } = useSwitch();
+  const [isOpen, setIsOpen] = useState(false);
+  const socialLink = isSwitchOn ? gruzLink : rinkitLink;
+  const [playingAudio, setPlayingAudio] = useState<string | null>(null);
+
+  const audioEngRef = useRef<HTMLAudioElement>(null);
+  const audioItaRef = useRef<HTMLAudioElement>(null);
+
+  const handlePlay = (
+    audioType: string,
+    audioRef: React.RefObject<HTMLAudioElement>,
+  ) => {
+    const stopCurrentAudio = () => {
+      if (playingAudio === "ENG" && audioEngRef.current) {
+        audioEngRef.current.pause();
+        audioEngRef.current.currentTime = 0;
+      } else if (playingAudio === "ITA" && audioItaRef.current) {
+        audioItaRef.current.pause();
+        audioItaRef.current.currentTime = 0;
+      }
+    };
+
+    if (playingAudio === audioType) {
+      // If the clicked audio is already playing, stop it.
+      stopCurrentAudio();
+      setPlayingAudio(null);
+    } else {
+      // If another audio is playing, stop it before starting the new one.
+      stopCurrentAudio();
+
+      // Play the new audio.
+      if (audioRef.current) {
+        audioRef.current.play();
+        setPlayingAudio(audioType);
+      }
+    }
+  };
+
   return (
     <section>
+      <audio
+        ref={audioEngRef}
+        src="/assets/Audios/MattiaPresentationENG.mp3"
+        onEnded={() => setPlayingAudio(null)}
+      />
+      <audio
+        ref={audioItaRef}
+        src="/assets/Audios/Mattia_PresentationITA.mp3"
+        onEnded={() => setPlayingAudio(null)}
+      />
       <div className=" flex flex-col gap-2">
         <div className=" block md:hidden">
           <Available text="Available" />
@@ -43,6 +89,30 @@ const InfoCard: React.FC = () => {
               <h1 className=" head-name ">
                 {isSwitchOn ? gruzName : rinkitName}
               </h1>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => handlePlay("ENG", audioEngRef)}
+                  className="flex items-center gap-2 px-2 py-1 text-xs font-semibold text-white bg-zinc-800 rounded-md hover:bg-zinc-700 transition-colors duration-200"
+                >
+                  {playingAudio === "ENG" ? (
+                    <FaPause className="size-[10px]" />
+                  ) : (
+                    <FaPlay className="size-[10px]" />
+                  )}
+                  <span>ENG</span>
+                </button>
+                <button
+                  onClick={() => handlePlay("ITA", audioItaRef)}
+                  className="flex items-center gap-2 px-2 py-1 text-xs font-semibold text-white bg-zinc-800 rounded-md hover:bg-zinc-700 transition-colors duration-200"
+                >
+                  {playingAudio === "ITA" ? (
+                    <FaPause className="size-[10px]" />
+                  ) : (
+                    <FaPlay className="size-[10px]" />
+                  )}
+                  <span>ITA</span>
+                </button>
+              </div>
               <div className=" md:block hidden">
                 <Available text="Available" />
               </div>
@@ -114,7 +184,7 @@ const InfoCard: React.FC = () => {
         )}
       </AnimatePresence>
     </section>
-  )
-}
+  );
+};
 
-export default InfoCard
+export default InfoCard;
