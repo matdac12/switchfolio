@@ -25,7 +25,7 @@ const InfoCard: React.FC = () => {
 
   const handlePlay = (
     audioType: string,
-    audioRef: React.RefObject<HTMLAudioElement>,
+    audioRef: React.RefObject<HTMLAudioElement | null>,
   ) => {
     const stopCurrentAudio = () => {
       if (playingAudio === "ENG" && audioEngRef.current) {
