@@ -1,28 +1,36 @@
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import "../styles/globals.css"
-import { Toaster } from "react-hot-toast"
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "../styles/globals.css";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-})
+});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-})
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "Mattia Da Campo - Portfolio",
-    template: "%s | Mattia Da Campo"
+    default: "0xmatti - Portfolio",
+    template: "%s | 0xmatti",
   },
-  description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
-  keywords: ["Mattia Da Campo", "Portfolio", "Software Engineer", "Basketball Player", "AI", "Data Analysis", "Trading"],
-  authors: [{ name: "Mattia Da Campo" }],
-  creator: "Mattia Da Campo",
-  metadataBase: new URL("https://mattiadacampo.com"),
+  description:
+    "Portfolio of 0xmatti - Software Engineer specializing in AI, Data Analysis, and Trading.",
+  keywords: [
+    "0xmatti",
+    "Portfolio",
+    "Software Engineer",
+    "AI",
+    "Data Analysis",
+    "Trading",
+  ],
+  authors: [{ name: "0xmatti" }],
+  creator: "0xmatti",
+  metadataBase: new URL("https://0xmatti.com"),
   icons: {
     icon: [
       {
@@ -50,16 +58,17 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Mattia Da Campo - Portfolio",
-    description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
-    url: "https://mattiadacampo.com",
-    siteName: "Mattia Da Campo",
+    title: "0xmatti - Portfolio",
+    description:
+      "Portfolio of 0xmatti - Software Engineer specializing in AI, Data Analysis, and Trading.",
+    url: "https://0xmatti.com",
+    siteName: "0xmatti",
     images: [
       {
         url: "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
         width: 1200,
         height: 630,
-        alt: "Mattia Da Campo - Portfolio"
+        alt: "0xmatti - Portfolio",
       },
     ],
     locale: "en-IN",
@@ -67,9 +76,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mattia Da Campo - Portfolio",
-    description: "Portfolio of Mattia Da Campo - Software Engineer and Professional Basketball Player specializing in AI, Data Analysis, and Trading.",
-    images: ["https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png"],
+    title: "0xmatti - Portfolio",
+    description:
+      "Portfolio of 0xmatti - Software Engineer specializing in AI, Data Analysis, and Trading.",
+    images: [
+      "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
+    ],
     creator: "@0xmatti",
   },
   robots: {
@@ -83,12 +95,12 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -99,5 +111,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
