@@ -48,7 +48,7 @@ const projects = [
   },
   {
     id: 3,
-    img: "/assets/Images/project/snipnote.png",
+    img: "/assets/Images/project/snipnote.PNG",
     title: "SnipNote",
     status: true,
     content:
