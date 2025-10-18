@@ -12,9 +12,9 @@ import { useSwitch } from "../Context/SwitchContext";
 
 const Projects = () => {
   const { isSwitchOn } = useSwitch();
-  const showAllVis = projects.length > 2;
+  const showAllVis = projects.length > 3;
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? projects : projects.slice(0, 2);
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
   let delayValue = 0;
   return (
     <div id="projects" className="flex flex-col gap-3">

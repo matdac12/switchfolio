@@ -60,6 +60,34 @@ const projects = [
     skill: ["React", "Python", "AI"],
     preview: "/assets/Videos/demo/snipnote.mp4",
   },
+  {
+    id: 4,
+    img: "/assets/Images/project/port.jpeg",
+    title: "OpenAI Claude Skill",
+    status: true,
+    content:
+      "A Claude skill that provides information and code examples for the OpenAI API. It's designed to help developers quickly integrate OpenAI's powerful models into their applications.",
+    content_it:
+      "Una skill per Claude che fornisce informazioni ed esempi di codice per l'API di OpenAI. È progettata per aiutare gli sviluppatori a integrare rapidamente i potenti modelli di OpenAI nelle loro applicazioni.",
+    url: "#",
+    github: "https://github.com/matdac12/openai-skill",
+    skill: ["AI", "Python"],
+    preview: "#",
+  },
+  {
+    id: 5,
+    img: "/assets/Images/project/snake.jpg",
+    title: "Local Transcriber",
+    status: true,
+    content:
+      "A zero-cost, local transcription application that leverages Whisper models. Transcribe audio files securely on your own machine without relying on cloud services.",
+    content_it:
+      "Un'applicazione di trascrizione locale a costo zero che sfrutta i modelli Whisper. Trascrivi i file audio in modo sicuro sulla tua macchina senza dipendere da servizi cloud.",
+    url: "#",
+    github: "https://github.com/matdac12/transcriber",
+    skill: ["AI", "Python"],
+    preview: "#",
+  },
 ];
 
 const writings: Array<{
