@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "0xmatti",
     images: [
       {
-        url: "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
+        url: "/assets/Images/meta/dontstop.JPG",
         width: 1200,
         height: 630,
         alt: "0xmatti - Portfolio",
@@ -79,9 +79,7 @@ export const metadata: Metadata = {
     title: "0xmatti - Portfolio",
     description:
       "Portfolio of 0xmatti - Software Engineer specializing in AI, Data Analysis, and Trading.",
-    images: [
-      "https://res.cloudinary.com/dhcocqegu/image/upload/v1753737110/OGN_o7spwl.png",
-    ],
+    images: ["/assets/Images/meta/dontstop.JPG"],
     creator: "@0xmatti",
   },
   robots: {
