@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     siteName: "0xmatti",
     images: [
       {
-        url: "/assets/Images/meta/dontstop.JPG",
+        url: "/assets/Images/meta/dontstop_cropped.png",
         width: 1200,
         height: 630,
         alt: "0xmatti - Portfolio",
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     title: "0xmatti - Portfolio",
     description:
       "Portfolio of 0xmatti - Software Engineer specializing in AI, Data Analysis, and Trading.",
-    images: ["/assets/Images/meta/dontstop.JPG"],
+    images: ["/assets/Images/meta/dontstop_cropped.png"],
     creator: "@0xmatti",
   },
   robots: {
