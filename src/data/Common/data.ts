@@ -1,0 +1,156 @@
+import {
+  FaGithub,
+  FaPython,
+  FaXTwitter,
+  FaChartLine,
+  FaInstagram,
+} from "react-icons/fa6";
+import { RiReactjsLine } from "react-icons/ri";
+import { HiSparkles } from "react-icons/hi2";
+import { IoAnalytics } from "react-icons/io5";
+
+const skills = [
+  { id: 1, icon: RiReactjsLine, text: "React" },
+  { id: 2, icon: FaPython, text: "Python" },
+  { id: 3, icon: HiSparkles, text: "AI" },
+  { id: 4, icon: FaChartLine, text: "Trading" },
+  { id: 5, icon: IoAnalytics, text: "Data Analysis" },
+];
+
+export interface Project {
+  id: number;
+  img: string;
+  title: string;
+  status: boolean;
+  content: string;
+  content_it: string;
+  url: string;
+  github: string;
+  skill: string[];
+  preview: string;
+  trackingUrl?: string;
+}
+
+const projects: Project[] = [
+  {
+    id: 1,
+    img: "/assets/Images/project/dca_superagent.JPG",
+    title: "DCA Superagent",
+    status: true,
+    content:
+      "An intelligent DCA (Dollar-Cost Averaging) trading agent that invests slow, steady, and smart. Automated constant investing strategies powered by data-driven algorithms.",
+    content_it:
+      "Un agente di trading DCA intelligente che investe in modo lento, costante e intelligente. Strategie di investimento automatizzate e costanti basate su algoritmi guidati dai dati.",
+    url: "https://0xmatti.eu.pythonanywhere.com/",
+    github: "https://github.com/matdac12/dca-superagent",
+    skill: ["Python", "AI", "Trading", "Data Analysis"],
+    trackingUrl: "https://0xmatti.eu.pythonanywhere.com/",
+    preview: "",
+  },
+  {
+    id: 2,
+    img: "/assets/Images/project/eball.png",
+    title: "eBall Analytics",
+    status: true,
+    content:
+      "A basketball analytics platform that breaks the game down to its core. Built for players, coaches, and analysts to gain deeper insights into performance metrics and game strategies.",
+    content_it:
+      "Una piattaforma di analisi per il basket che scompone il gioco fino al suo nucleo. Creata per giocatori, allenatori e analisti per ottenere una comprensione più approfondita delle metriche di performance e delle strategie di gioco.",
+    url: "https://www.eball.app",
+    github: "https://github.com/matdac12",
+    skill: ["React", "Python", "Data Analysis"],
+    preview: "/assets/Videos/demo/eball.mp4",
+  },
+  {
+    id: 3,
+    img: "/assets/Images/project/snipnote.PNG",
+    title: "SnipNote",
+    status: true,
+    content:
+      "An AI-powered transcription app that turns thoughts into action. SnipNote helps you capture ideas, meetings, and notes effortlessly with advanced AI transcription technology.",
+    content_it:
+      "Un'app di trascrizione basata sull'IA che trasforma i pensieri in azioni. SnipNote ti aiuta a catturare idee, riunioni e appunti senza sforzo con una tecnologia avanzata di trascrizione IA.",
+    url: "https://snipnote.app",
+    github: "https://github.com/matdac12",
+    skill: ["React", "Python", "AI"],
+    preview: "/assets/Videos/demo/snipnote.mp4",
+  },
+  {
+    id: 4,
+    img: "/assets/Images/project/port.jpeg",
+    title: "OpenAI Claude Skill",
+    status: true,
+    content:
+      "A Claude skill that provides information and code examples for the OpenAI API. It's designed to help developers quickly integrate OpenAI's powerful models into their applications.",
+    content_it:
+      "Una skill per Claude che fornisce informazioni ed esempi di codice per l'API di OpenAI. È progettata per aiutare gli sviluppatori a integrare rapidamente i potenti modelli di OpenAI nelle loro applicazioni.",
+    url: "#",
+    github: "https://github.com/matdac12/openai-skill",
+    skill: ["AI", "Python"],
+    preview: "#",
+  },
+  {
+    id: 5,
+    img: "/assets/Images/project/snake.jpg",
+    title: "Local Transcriber",
+    status: true,
+    content:
+      "A zero-cost, local transcription application that leverages Whisper models. Transcribe audio files securely on your own machine without relying on cloud services.",
+    content_it:
+      "Un'applicazione di trascrizione locale a costo zero che sfrutta i modelli Whisper. Trascrivi i file audio in modo sicuro sulla tua macchina senza dipendere da servizi cloud.",
+    url: "#",
+    github: "https://github.com/matdac12/transcriber",
+    skill: ["AI", "Python"],
+    preview: "#",
+  },
+];
+
+const writings: Array<{
+  id: number;
+  img: string;
+  head: string;
+  des: string;
+  link: string;
+}> = [
+  // Add your blog posts here when you start writing
+];
+
+const hireText =
+  "Offro consulenze gratuite per parlare dei tuoi progetti e di quello che posso fare per te. Sentiti libero di contattarmi se vuoi connetterti o collaborare su qualcosa di interessante.";
+
+const emailLink = "mailto:mattia.dacampo@gmail.com?subject=Let's%20Connect";
+
+const navLinks = [
+  {
+    id: 1,
+    name: "GitHub",
+    link: "https://github.com/matdac12",
+    icon: FaGithub,
+  },
+  {
+    id: 2,
+    name: "Twitter",
+    link: "https://x.com/0xmatti",
+    icon: FaXTwitter,
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    link: "https://instagram.com/mattia.dacampo",
+    icon: FaInstagram,
+  },
+];
+
+const supportText = "";
+const newsText = "";
+
+export {
+  projects,
+  writings,
+  emailLink,
+  skills,
+  hireText,
+  navLinks,
+  supportText,
+  newsText,
+};
